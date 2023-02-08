@@ -18,6 +18,7 @@
     <canvas #myCanvas></canvas>
     <h2 [innerText]="h2"></h2>
 <!--</main>-->
-<input type="file" id="selectfile" (change)="ajax_file_upload($event)"/>
+<input type="text" #name>
+<input type="file" id="selectfile" (change)="ajax_file_upload($event, name.value)"/>
 <!--</body>-->
 <!--</html>-->

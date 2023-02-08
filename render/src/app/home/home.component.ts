@@ -83,7 +83,7 @@ export class HomeComponent implements AfterViewInit {
     })
   }
 
-  public ajax_file_upload(files_obj: any) {
+  public ajax_file_upload(files_obj: any, name: string) {
     const reader = new FileReader();
     reader.readAsDataURL(files_obj.target.files[0]);
     reader.onload = () => {
@@ -96,7 +96,7 @@ export class HomeComponent implements AfterViewInit {
           }
         `,
         variables: {
-          name: "remi",
+          name: name,
           file: reader.result
         },
         context: {
